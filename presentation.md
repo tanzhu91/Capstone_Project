@@ -1,4 +1,4 @@
-# __Introduction__
+# Introduction
 
 This project analyses video game data from the popular digital distribution platform, Steam, examining key features such as the number of games, prices, platforms, genres, and total playtime. The goal is to uncover data-driven insights from the gaming world. I have always enjoyed playing video games. What makes video games so captivating? Is it the thrill of excitement, the joy of entertainment, or the challenge of competition and problem-solving? Which genres and platforms dominate the market, and where do players spend the most time?
 
@@ -23,7 +23,7 @@ Additionally, the release of games tends to peak during the holiday and winter s
 
 
 
-Section 2: Platforms, Ratings, and Revenue
+## Section 2: Platforms, Ratings, and Revenue
 
 The majority of games support Windows, making it the most dominant platform. Games that support both Windows and other operating systems, like Mac and Linux, have a strong presence as well. However, games released exclusively for Mac or Linux remain limited. 
 
@@ -61,7 +61,7 @@ Role-Playing Games (RPGs) emerge as the most profitable genre, while Indie, Acti
 
 
 
-Section 3: Popular Genres and Playtime Trends
+## Section 3: Popular Genres and Playtime Trends
 
 When it comes to playtime distribution, the Indie genre (so called independent genre developed by smaller studios) takes the lead, followed by Action, Adventure, Simulation, RPG's, and Strategy. Smaller genres are grouped under "Others".
 
@@ -81,14 +81,14 @@ Notably, while the Casual genre sees a large number of releases, it falls behind
 ![newplot(16)](https://github.com/user-attachments/assets/45c9c7d3-9842-408d-b1b0-bf697ffc6fbd)
 
 
-Final Insights
+# Final Insights
 
 Top Genres: Players gravitate toward genres like Indie, Action, Adventure, RPG, Casual, Simulation, and Strategy, which dominate in terms of both production and playtime.
 Game Categories: Single-player games, Family Sharing, and Steam Achievements are among the top categories where significant playtime and release number are recorded.
 Platforms: Windows remains the leading platform, while supporting Mac or Linux alongside Windows enhances game reach. Most ratings and reviews focus on Windows-based games or combinations that include Windows.
 
 
-Conclusion
+# Conclusion
 
 Video games offer a structured system of achievement and reward, providing players with opportunities to develop skills, maintain focus, and experience a sense of control and accomplishment. Immersing oneself in a different worlds or stepping into the role of another character can be both powerful and transformative. Additionally, video games serve as a platform for social connection, uniting individuals with shared interests and values. By understanding these trends, developers and publishers can better tailor their offerings to meet player preferences, ensuring the continued growth and success of the gaming industry.
 
