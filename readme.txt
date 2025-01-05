@@ -1,1 +1,1 @@
-Use the notebook data prep in the notebooks folder to transform the dataset from the link into games_prepped.csv , then launch app.py with that data.
+Use the notebook data_prep in the notebooks folder to transform the dataset from the link into games_prepped.csv , then launch app.py with the command "streamlit run app.py" in a new terminal with that data inside the data folder. For better visual select wide mode in the top right corner in settings.
