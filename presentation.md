@@ -1,7 +1,9 @@
+# __Introduction__
+
 This project analyses video game data from the popular digital distribution platform, Steam, examining key features such as the number of games, prices, platforms, genres, and total playtime. The goal is to uncover data-driven insights from the gaming world. I have always enjoyed playing video games. What makes video games so captivating? Is it the thrill of excitement, the joy of entertainment, or the challenge of competition and problem-solving? Which genres and platforms dominate the market, and where do players spend the most time?
 
 
-Section 1: Growth of the Gaming Industry
+## Section 1: Growth of the Gaming Industry
 
 The gaming industry has been a multibillion dollar industry since many decades.
 Since its launch in 2003, Steam has witnessed a steady increase in the number of games released. While there was a slight slowdown in 2019, just before the COVID-19 pandemic, releases have rebounded and continued to rise.
