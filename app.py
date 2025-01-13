@@ -3,6 +3,8 @@ import plotly.io as pio
 import plotly.graph_objects as go
 import warnings
 warnings.filterwarnings("ignore")
+
+
 custom_template = {
     "layout": {
         "font": {
@@ -90,8 +92,8 @@ st.markdown("""
         /* Header Styles */
         h1 , h2, h3, h4, h5, h6 {
             font-family: 'Poppins', sans-serif;
-            color: #32CD32;  /* Neon Green */
-            text-shadow: 2px 2px 4px rgba(50, 205, 50, 0.5); /* Subtle glow */
+            color: #D4B483;  /* Beige */
+            text-shadow: 2px 2px 4px rgba(212, 180, 131, 0.5); /* Subtle glow */
             text-transform: uppercase; /* All caps for a bold look */
             font-weight: 800; /* Medium-bold headers */
             margin-bottom: 15px;
@@ -99,24 +101,24 @@ st.markdown("""
 
         /* Sidebar */
         [data-testid="stSidebar"] {
-            background: linear-gradient(135deg, #32CD32,  #1E1E2F ); /* Darker gradient for sidebar */
-            border-right: 3px solid #32CD32; /* Neon Green border */
+            background: linear-gradient(135deg, #D4B483,  #1E1E2F ); /* Beige gradient for sidebar */
+            border-right: 3px solid #D4B483; /* Beige border */
             color: #1E1E2F; /* Light gray text for better contrast */
         }
         [data-testid="stSidebar"] h1, h2, h3, h4, h5, h6 {
-            color: #32CD32; /* Neon Green for sidebar headers */
+            color: #D4B483; /* Beige for sidebar headers */
             text-shadow: none; /* No glow for sidebar */
         }
 
         /* Streamlit Title Bar (Top Bar) */
         header[data-testid="stHeader"] {
             background: linear-gradient(135deg, #1E1E2F, #2A2A3D); /* Match sidebar color */
-            border-bottom: 3px solid #32CD32; /* Neon Green bottom border */
+            border-bottom: 3px solid #D4B483; /* Beige bottom border */
         }
         header[data-testid="stHeader"] .stAppViewContainer > div:first-child {
-            color: #32CD32; /* Light gray text for title */
+            color: #D4B483; /* Light gray text for title */
             text-align: center;
-            text-shadow: 1px 1px 4px rgba(50, 205, 50, 0.7); /* Neon glow */
+            text-shadow: 1px 1px 4px rgba(212, 180, 131, 0.7); /* Beige glow */
         }
 
         /* Tabs Styling (st.tabs) */
@@ -137,8 +139,8 @@ st.markdown("""
         }
         div[data-testid="stHorizontalBlock"] > div:first-child > div[aria-selected="true"] {
             color: white; /* White text for active tab */
-            background: linear-gradient(135deg, #32CD32, #228B22); /* Green background for active tab */
-            box-shadow: 0 4px 10px rgba(50, 205, 50, 0.5); /* Glow for active tab */
+            background: linear-gradient(135deg, #D4B483, #C9A067); /* Beige background for active tab */
+            box-shadow: 0 4px 10px rgba(212, 180, 131, 0.5); /* Glow for active tab */
         }
         div[data-testid="stHorizontalBlock"] > div:first-child > div:hover {
             background: rgba(255, 255, 255, 0.1); /* Light background on hover */
@@ -154,7 +156,7 @@ st.markdown("""
         }
         div[data-testid="stVerticalTab"] button[data-selected="true"] {
             color: white; /* White text for active tab */
-            background: linear-gradient(135deg, #32CD32, #228B22); /* Highlighted background for active tab */
+            background: linear-gradient(135deg, #D4B483, #C9A067); /* Highlighted background for active tab */
             border-radius: 8px; /* Rounded corners */
         }
         div[data-testid="stVerticalTab"] button:hover {
@@ -173,27 +175,27 @@ st.markdown("""
 
         /* Buttons */
         button {
-            background: linear-gradient(135deg, #32CD32, #32CD32); /* Neon Green */
+            background: linear-gradient(135deg, #D4B483, #C9A067); /* Beige */
             color: white;
             border: none;
             border-radius: 8px;
             padding: 10px 20px;
             font-weight: bold;
             font-size: 16px;
-            box-shadow: 0 4px 10px rgba(50, 205, 50, 0.5);
+            box-shadow: 0 4px 10px rgba(212, 180, 131, 0.5);
             cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
         button:hover {
             transform: scale(1.05); /* Slight zoom on hover */
-            background: linear-gradient(135deg, #32CD32, #228B22); /* Darker green on hover */
+            background: linear-gradient(135deg, #C9A067, #B78F5A); /* Darker beige on hover */
         }
 
         /* Inputs */
         input, textarea, select {
             background: rgba(255, 255, 255, 0.1);
             color: white;
-            border: 1px solid #32CD32; /* Neon Green */
+            border: 1px solid #D4B483; /* Beige */
             border-radius: 8px;
             padding: 10px;
         }
