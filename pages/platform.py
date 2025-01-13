@@ -13,7 +13,7 @@ st.markdown("")
 
 tab1, tab2 , tab3, tab4 = st.tabs(["Platform popularity", "Top rated games", "Top publishers and genres" ,"Top 10 prices and playtime"])
 
-data = pd.read_csv(rf'C:\Users\tanju\Desktop\Project\Capstone_Project\data\games_prepped.csv', low_memory=False)
+data = pd.read_csv('data\games_prepped.csv', low_memory=False)
 df = data[data['year'] != 2024]
 
 
