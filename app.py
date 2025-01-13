@@ -3,50 +3,49 @@ import plotly.io as pio
 import plotly.graph_objects as go
 import warnings
 warnings.filterwarnings("ignore")
-
 custom_template = {
     "layout": {
         "font": {
-            "family": "Poppins, sans-serif",  # Font family for the entire plot
-            "size": 20,                      # Default font size (optional)
-            "color": "#E8E8E8",              # Default text color
+            "family": "Poppins, sans-serif",
+            "size": 28,
+            "color": "#E8E8E8",
         },
-        "paper_bgcolor": "rgba(30, 30, 47, 1)",  # Background color of the plot
-        "plot_bgcolor": "rgba(30, 30, 47, 1)",   # Background color of the plotting area
+        "paper_bgcolor": "rgba(30, 30, 47, 1)",
+        "plot_bgcolor": "rgba(30, 30, 47, 1)",
         
         "title": {  
             "font": { 
-                "size": 32,   # Larger font size for the main title
-                "color": "#32CD32",  # Neon green for titles
+                "size": 32,
+                "color": "#32CD32",
             },
-            "x": 0.5,  # Center align the title
+            "x": 0.5,
             "xanchor": "center",
         },
         
         "xaxis": {
-            "title": {  # X-axis title settings
+            "title": {
                 "font": { 
-                    "size": 26,  # Font size for x-axis title
-                    "color": "#FFFFFF",  # Color of the x-axis title
+                    "size": 26,
+                    "color": "#FFFFFF",
                 },
             },
-            "tickfont": {  # Font size for x-axis tick labels
+            "tickfont": {
                 "size": 22,  
                 "color": "#FFFFFF",
             },
-            "gridcolor": "rgba(255, 255, 255, 0.1)",  # Gridline color
-            "zerolinecolor": "rgba(255, 255, 255, 0.2)",  # Zero-line color
-            "color": "#FFFFFF",  # Color of axis line and labels
+            "gridcolor": "rgba(255, 255, 255, 0.1)",
+            "zerolinecolor": "rgba(255, 255, 255, 0.2)",
+            "color": "#FFFFFF",
         },
 
         "yaxis": {
-            "title": {  # Y-axis title settings
+            "title": {
                 "font": { 
-                    "size": 26,  # Font size for y-axis title
-                    "color": "#FFFFFF",  # Color of the y-axis title
+                    "size": 26,
+                    "color": "#FFFFFF",
                 },
             },
-            "tickfont": {  # Font size for y-axis tick labels
+            "tickfont": {
                 "size": 22,  
                 "color": "#FFFFFF",
             },
@@ -56,15 +55,14 @@ custom_template = {
         },
         
         "legend": {
-            "font": {"size": 22, "color": "#E8E8E8"},  # Legend text size
-            "bgcolor": "rgba(70, 70, 100, 0.4)",  # Semi-transparent legend background
+            "font": {"size": 22, "color": "#E8E8E8"},
+            "bgcolor": "rgba(70, 70, 100, 0.4)",
         },
     }
 }
 
 pio.templates["custom"] = custom_template
 pio.templates.default = "custom"
-
 
 
 
