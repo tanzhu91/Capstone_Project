@@ -53,7 +53,7 @@ features_melted = cross_platform_features.melt(id_vars='platform_combination',
 
 
 #fifth
-meta = df[df['metacritic_score'] > 92]
+meta = df[df['metacritic_score'] > 91]
 
 meta_agg = meta[['name', 'metacritic_score','required_age','Genre_1','Genre_2']].sort_values(by='metacritic_score', ascending=False).head(10)
 
