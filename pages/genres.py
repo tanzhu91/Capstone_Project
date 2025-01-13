@@ -14,7 +14,7 @@ st.title("Genres, Categories and playtime analysis")
 
 tab1, tab2  = st.tabs(["Playtime across Genres and Categories", "Top 10 Genres with most playtime and number of games"])
 
-df = pd.read_csv(rf'C:\Users\tanju\Desktop\Project\Capstone_Project\data\games_prepped.csv', low_memory=False)
+df = pd.read_csv('data/games_prepped.csv', low_memory=False)
 data = df[df['year'] != 2024]
 
 
