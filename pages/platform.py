@@ -13,7 +13,7 @@ st.markdown("")
 
 tab1, tab2 , tab3, tab4 = st.tabs(["Platform popularity", "Top rated games", "Top publishers and genres" ,"Top 10 prices and playtime"])
 
-data = pd.read_csv('data/games_prepped.csv', low_memory=False)
+data = pd.read_csv(rf'C:\Users\tanju\Desktop\Project\Capstone_Project\data\games_prepped.csv', low_memory=False)
 df = data[data['year'] != 2024]
 
 
@@ -53,7 +53,7 @@ features_melted = cross_platform_features.melt(id_vars='platform_combination',
 
 
 #fifth
-meta = df[df['metacritic_score'] > 91]
+meta = df[df['metacritic_score'] > 92]
 
 meta_agg = meta[['name', 'metacritic_score','required_age','Genre_1','Genre_2']].sort_values(by='metacritic_score', ascending=False).head(10)
 
@@ -153,9 +153,9 @@ fig7 = px.scatter(meta_agg,
                   hover_name="name",
                   labels={'Genre_1': 'Genre', 
                           'metacritic_score':'Metacritic Score'
-                          ,'name':'Name'},
+                          ,'name':'Name','required_age':'Required Age'},
                           title='Top 10 games rated by critics, their Genre and age restriction',
-                          color_discrete_sequence=px.colors.qualitative.Bold)
+                          color_discrete_sequence=px.colors.qualitative.Vivid_r)
 fig7.update_xaxes(title={'text': 'Rating', 'font': {'size': 28}},
                   tickfont={'size': 26},
                   showgrid=True, gridcolor='lightgray', gridwidth=1)
@@ -163,13 +163,13 @@ fig7.update_yaxes(title={'text': 'Game Name', 'font': {'size': 28}},
                   tickfont={'size': 26},
                   showgrid=True, gridcolor='lightgray', gridwidth=1,
                   categoryorder='total ascending')
-fig7.update_traces(marker=dict(size=40))
+fig7.update_traces(marker=dict(size=50))
 fig7.update_layout(title={
         'text': 'Top 10 games rated by critics, their Genre and age restriction',
         'font': {'size': 30}},
     height=700, legend={
         'title': {'text': 'Genre', 'font': {'size': 26}},
-        'font': {'size': 24} 
+        'font': {'size': 24}
     }
 )
 
@@ -181,10 +181,10 @@ fig9 = px.scatter(user_agg,
                   text='required_age',
                   hover_name="name",
                   labels={'Genre_1': 'Genre', 
-                          'user_score':'user Score'
-                          ,'name':'Name'},
+                          'user_score':'User Score'
+                          ,'name':'Name','required_age':'Required Age'},
                           title='Top 10 games rated by users, their Genre and age restriction',
-                          color_discrete_sequence=px.colors.qualitative.Bold)
+                          color_discrete_sequence=px.colors.qualitative.Vivid_r)
 fig9.update_xaxes(title={'text': 'Rating', 'font': {'size': 28}},
                   tickfont={'size': 26},
                   showgrid=True, gridcolor='lightgray', gridwidth=1)
@@ -192,7 +192,7 @@ fig9.update_yaxes(title={'text': 'Game Name', 'font': {'size': 28}},
                   tickfont={'size': 26},
                   showgrid=True, gridcolor='lightgray', gridwidth=1,
                   categoryorder='total ascending')
-fig9.update_traces(marker=dict(size=40))
+fig9.update_traces(marker=dict(size=50))
 fig9.update_layout(title={
         'text': 'Top 10 games rated by users, their Genre and age restriction',
         'font': {'size': 30}},
@@ -219,7 +219,7 @@ fig8 = px.bar(top_10_playtime,
             )
 
 fig8.update_xaxes(title={'text': 'Average Playtime (Hours)', 'font': {'size': 28}},
-                  tickfont={'size': 26},
+                  tickfont={'size': 24},
                   categoryorder='total descending',
                   showgrid=True, gridcolor='lightgray', gridwidth=1)
 fig8.update_yaxes(title={'text': 'Game Name', 'font': {'size': 28}},
@@ -291,7 +291,7 @@ fig10.update_yaxes(title={'text': 'Game Name', 'font': {'size': 28}},
                    tickfont={'size': 26},categoryorder='total ascending',
                    showgrid=True, gridcolor='lightgray', gridwidth=1)
 fig10.update_layout(title={
-        'text': 'Top Publishers by playtime and revenue',
+        'text': 'Top 10 priced Games, their primary Genre and release year',
         'font': {'size': 30}},
     height=700, legend={
         'title': {'text': 'Genre', 'font': {'size': 26}},
