@@ -18,17 +18,16 @@ if response.status_code == 200:
     print("File downloaded successfully.")
 else:
     print(f"Failed to download the file. Status code: {response.status_code}")
-
+    
+data = pd.read_csv("./games_prepped.csv", low_memory=False)
 
 st.title("Number of games and Revenue analysis")
 
 
 
 #Data Frames selection
-#data = pd.read_csv('data/games_prepped.csv', low_memory=False)
-data = pd.read_csv("games_prepped.csv", low_memory=False)
-df = data[(data['year'] != 2024) & (data['year'] >= 2003)]
 
+df = data[(data['year'] != 2024) & (data['year'] >= 2003)]
 df_agg = df.groupby(['year']).agg({'estimated_revenue': 'sum'}).reset_index()
 filtered_df =df_agg[(df_agg['year'] >= 2009) & (df_agg['year'] <= 2023)]
 
