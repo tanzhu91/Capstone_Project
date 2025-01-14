@@ -207,7 +207,7 @@ st.markdown("""
 
 
 
-st.set_page_config(page_title="Your App Title", layout="wide")
+
 
 app = st.navigation([
     st.Page("pages/intro.py", title="Introduction"),
@@ -215,7 +215,8 @@ app = st.navigation([
     st.Page("pages/platform.py", title ="Platform, Ratings and top games"),
     st.Page("pages/genres.py", title ="Genres, Categories and Playtime"),
     st.Page("pages/conclusion.py", title="Conclusion"),
-    st.Page("pages/references.py", title=" References")
+    st.Page("pages/references.py", title=" References"),
+    st.set_page_config(layout="wide")
 ])
 app.run()
 
