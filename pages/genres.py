@@ -4,7 +4,16 @@ import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+import requests
 
+url = "https://drive.google.com/uc?id=15chzeZyWPzFOmVsTZzUlVqXU91deZhog&export=download"
+
+
+response = requests.get(url)
+if response.status_code == 200:
+    with open("games_prepped.csv", "wb") as f:
+        f.write(response.content)
+else:
 
 
 
@@ -14,7 +23,7 @@ st.title("Genres, Categories and playtime analysis")
 
 tab1, tab2  = st.tabs(["Playtime across Genres and Categories", "Top 10 Genres with most playtime and number of games"])
 
-df = pd.read_csv('data/games_prepped.csv', low_memory=False)
+df = pd.read_csv('games_prepped.csv', low_memory=False)
 data = df[df['year'] != 2024]
 
 
