@@ -7,6 +7,19 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 
 
+import requests
+
+url = "https://drive.google.com/uc?id=15chzeZyWPzFOmVsTZzUlVqXU91deZhog&export=download"
+
+
+response = requests.get(url)
+if response.status_code == 200:
+    with open("games_prepped.csv", "wb") as f:
+        f.write(response.content)
+    print("File downloaded successfully.")
+else:
+    print("Failed to download the file.")
+
 
 
 
@@ -15,7 +28,8 @@ st.title("Number of games and Revenue analysis")
 
 
 #Data Frames selection
-data = pd.read_csv('data/games_prepped.csv', low_memory=False)
+#data = pd.read_csv('data/games_prepped.csv', low_memory=False)
+data = pd.read_csv("games_prepped.csv", low_memory=False)
 df = data[(data['year'] != 2024) & (data['year'] >= 2003)]
 
 df_agg = df.groupby(['year']).agg({'estimated_revenue': 'sum'}).reset_index()
