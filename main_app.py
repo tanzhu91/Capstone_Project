@@ -70,6 +70,7 @@ pio.templates.default = "custom"
 
 
 
+
 st.markdown("""
     <style>
         /* General App Styling */
@@ -208,15 +209,13 @@ st.markdown("""
 
 
 
-
-
 app = st.navigation([
     st.Page("pages/intro.py", title="Introduction"),
     st.Page("pages/financial.py", title="Numbers and Revenue"),
-    st.Page("pages/platform.py", title ="Platform, Ratings and top games"),
+    st.Page("pages/platform.py", title ="Platform, Ratings and Top Games"),
     st.Page("pages/genres.py", title ="Genres, Categories and Playtime"),
     st.Page("pages/conclusion.py", title="Conclusion"),
     st.Page("pages/references.py", title=" References")
 ])
-app.run()
 
+app.run()
