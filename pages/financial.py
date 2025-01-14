@@ -20,21 +20,6 @@ else:
     print(f"Failed to download the file. Status code: {response.status_code}")
 
 
-data_chunks = pd.read_csv("./games_prepped.csv", low_memory=False, chunksize=50)
-
-
-processed_data = []
-
-for chunk in data_chunks:
-    if 'year' in chunk.columns:
-        filtered_chunk = chunk[(chunk['year'] != 2024) & (chunk['year'] >= 2003)]
-        processed_data.append(filtered_chunk)
-    else:
-        print("Column 'year' not found in this chunk")
-
-
-final_df = pd.concat(processed_data, ignore_index=True)
-
 
 
 
@@ -45,7 +30,7 @@ st.title("Number of games and Revenue analysis")
 
 #Data Frames selection
 
-df = final_df[(final_df['year'] != 2024) & (final_df['year'] >= 2003)]
+df = data[(data['year'] != 2024) & (data['year'] >= 2003)]
 
 df_agg = df.groupby(['year']).agg({'estimated_revenue': 'sum'}).reset_index()
 filtered_df =df_agg[(df_agg['year'] >= 2009) & (df_agg['year'] <= 2023)]
