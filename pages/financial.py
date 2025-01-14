@@ -14,7 +14,9 @@ response = requests.get(url)
 if response.status_code == 200:
     with open("games_prepped.csv", "wb") as f:
         f.write(response.content)
+    print("File downloaded successfully.")
 else:
+    print(f"Failed to download the file. Status code: {response.status_code}")
 
 
 st.title("Number of games and Revenue analysis")
