@@ -21,6 +21,7 @@ else:
 
 
 data_chunks = pd.read_csv("./games_prepped.csv", low_memory=False,chunksize=50)
+
 for chunk in data_chunks:
     # Check the columns to ensure 'year' exists
     print(chunk.columns)  # You can remove this in production, just for debugging
@@ -42,7 +43,7 @@ st.title("Number of games and Revenue analysis")
 
 #Data Frames selection
 
-df = data[(data['year'] != 2024) & (data['year'] >= 2003)]
+df = data_chunks[(data_chunks['year'] != 2024) & (data_chunks['year'] >= 2003)]
 
 df_agg = df.groupby(['year']).agg({'estimated_revenue': 'sum'}).reset_index()
 filtered_df =df_agg[(df_agg['year'] >= 2009) & (df_agg['year'] <= 2023)]
