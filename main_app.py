@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import warnings
 warnings.filterwarnings("ignore")
 
+st.set_page_config(page_title="My Wide App", layout="wide")
 
 custom_template = {
     "layout": {
