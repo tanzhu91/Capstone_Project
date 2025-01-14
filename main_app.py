@@ -207,6 +207,7 @@ st.markdown("""
 
 
 
+st.set_page_config(page_title="Your App Title", layout="wide")
 
 app = st.navigation([
     st.Page("pages/intro.py", title="Introduction"),
