@@ -19,7 +19,7 @@ if response.status_code == 200:
 else:
     print(f"Failed to download the file. Status code: {response.status_code}")
     
-data = pd.read_csv("./games_prepped.csv", low_memory=False,chunk_size=5)
+data = pd.read_csv("./games_prepped.csv", low_memory=False,chunksize=5)
 
 st.title("Number of games and Revenue analysis")
 
