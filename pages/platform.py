@@ -6,8 +6,9 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import requests
 
-url = "https://drive.google.com/uc?id=15chzeZyWPzFOmVsTZzUlVqXU91deZhog&export=download"
 
+file_id = '12dJOtPAKfp7sGtpMufyMH-6SryFVJ_iB'
+url = f'https://drive.google.com/uc?export=download&id={file_id}'
 
 response = requests.get(url)
 if response.status_code == 200:
