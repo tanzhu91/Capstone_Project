@@ -5,20 +5,28 @@ import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-import requests
 
 
-file_id = '12dJOtPAKfp7sGtpMufyMH-6SryFVJ_iB'
-url = f'https://drive.google.com/uc?export=download&id={file_id}'
 
-response = requests.get(url)
-if response.status_code == 200:
-    with open("games_prepped.csv", "wb") as f:
-        f.write(response.content)
-    print("File downloaded successfully.")
-else:
-    print(f"Failed to download the file. Status code: {response.status_code}")
+base_url = "https://raw.githubusercontent.com/tanzhu91/Capstone_Project/main/data/"
 
+
+file_names = [f"chunk_{i}.csv" for i in range(17)]
+
+
+dataframes = []
+
+
+for file_name in file_names:
+    url = base_url + file_name
+    try:
+        df = pd.read_csv(url)
+        dataframes.append(df)
+    except Exception as e:
+        print(f"Error loading {file_name}: {e}")
+
+
+data = pd.concat(dataframes, ignore_index=True)
 
 
 
@@ -29,7 +37,7 @@ st.title("Number of games and Revenue analysis")
 
 
 #Data Frames selection
-data = pd.read_csv('./games_prepped.csv', low_memory=False,chunksize=50000)
+#data = pd.read_csv('./games_prepped.csv', low_memory=False,chunksize=50000)
 df = data[(data['year'] != 2024) & (data['year'] >= 2003)]
 
 df_agg = df.groupby(['year']).agg({'estimated_revenue': 'sum'}).reset_index()
