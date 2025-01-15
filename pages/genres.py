@@ -6,16 +6,28 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import requests
 
-file_id = '12dJOtPAKfp7sGtpMufyMH-6SryFVJ_iB'
-url = f'https://drive.google.com/uc?export=download&id={file_id}'
 
-response = requests.get(url)
-if response.status_code == 200:
-    with open("games_prepped.csv", "wb") as f:
-        f.write(response.content)
-    print("File downloaded successfully.")
-else:
-    print(f"Failed to download the file. Status code: {response.status_code}")
+base_url = "https://raw.githubusercontent.com/tanzhu91/Capstone_Project/main/data/"
+
+file_names = [f"chunk_{i}.csv" for i in range(17)]
+
+
+dataframes = []
+
+
+for file_name in file_names:
+    url = base_url + file_name
+    try:
+        df = pd.read_csv(url)
+        dataframes.append(df)
+    except Exception as e:
+        print(f"Error loading {file_name}: {e}")
+
+
+df = pd.concat(dataframes, ignore_index=True)
+
+
+
 
 
 
@@ -24,7 +36,7 @@ st.title("Genres, Categories and playtime analysis")
 
 tab1, tab2  = st.tabs(["Playtime across Genres and Categories", "Top 10 Genres with most playtime and number of games"])
 
-df = pd.read_csv('./games_prepped.csv', low_memory=False,chunksize=50000)
+#df = pd.read_csv('./games_prepped.csv', low_memory=False,chunksize=50000)
 data = df[df['year'] != 2024]
 
 
