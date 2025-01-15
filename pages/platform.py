@@ -150,17 +150,6 @@ fig4.update_layout(title={
 )
 
 
-fig5 = px.bar(meta_agg,y='name',x='metacritic_score',color='required_age',
-hover_name="name",labels={'required_age': 'Required Age'},title='Top rated games and their required age')
-fig5.update_xaxes(title='Rating',
-                  showgrid=True, gridcolor='lightgray', gridwidth=1)
-fig5.update_yaxes(title='Games',showgrid=True, gridcolor='lightgray', gridwidth=1,
-                  categoryorder='total ascending')
-
-    
-fig5.update_yaxes(
-    showgrid=True, gridcolor='lightgray', gridwidth=1)
-
 
 
 
