@@ -4,7 +4,6 @@ import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-import requests
 
 
 base_url = "https://raw.githubusercontent.com/tanzhu91/Capstone_Project/main/data/"
