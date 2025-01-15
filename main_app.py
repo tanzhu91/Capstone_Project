@@ -5,7 +5,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-st.set_page_config(page_title="Wide Mode App", layout="wide")
+st.set_page_config(page_title="Streamlit App", layout="wide")
 
 custom_template = {
     "layout": {
