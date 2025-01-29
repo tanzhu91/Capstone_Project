@@ -37,9 +37,10 @@ User ratings and recommendations also heavily favour Windows-supported games.
 
 
 
-Top-rated games by critics are often action-oriented, with around 40% being in that genre and 40% with age restrictions of (17+). A personal favourite of mine, Portal 2, is also included here.
+Top-rated games by critics are often action-oriented, with around 60% being in that genre and 60% with age restrictions of (17+). A personal favourite of mine, Portal 2, is also included here.
 
-![newplot(7)](https://github.com/user-attachments/assets/1796929e-d618-43ae-8858-87f567505f7d)
+![newplot(2)](https://github.com/user-attachments/assets/81309780-697a-499c-908b-97cdfb0ed05d)
+
 
 Interestingly, user-rated games tend to differ from critic reviews, as niche games with smaller but dedicated player bases might receive high scores. A lot of them are also (18+) suggesting older people give ratings more frequently. 
 
