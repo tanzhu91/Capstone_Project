@@ -74,7 +74,7 @@ features_melted = cross_platform_features.melt(id_vars='platform_combination',
 #fifth
 meta = df[df['metacritic_score'] > 92]
 
-meta_agg = meta[['name', 'metacritic_score','required_age','Genre_1','Genre_2']].sort_values(by='metacritic_score', ascending=False).head(10)
+meta_agg = meta[['name', 'metacritic_score','required_age','Genre_1']].sort_values(by='metacritic_score', ascending=False).head(10)
 
 
 user_score = df[df['user_score'] > 92]
@@ -313,6 +313,7 @@ fig10.update_layout(title={
 
 genre_columns = ['Genre_1', 'Genre_2', 'Genre_3', 'Genre_4']
 grouped_list = []
+
 for genre_column in genre_columns:
     grouped = data.groupby([genre_column, 'estimated_revenue'], as_index=False)['average_playtime_forever_in_hours'].sum()
 
