@@ -32,7 +32,7 @@ st.markdown("")
 
 tab1, tab2 , tab3, tab4 = st.tabs(["Platform popularity", "Top rated games", "Top publishers and genres" ,"Top 10 prices and playtime"])
 
-#data = pd.read_csv('./games_prepped.csv', low_memory=False,chunksize=50000)
+
 df = data[data['year'] != 2024]
 
 
@@ -73,7 +73,7 @@ features_melted = cross_platform_features.melt(id_vars='platform_combination',
 
 #fifth
 meta = df[df['metacritic_score'] > 92]
-
+meta.loc[490, 'name'] = "The Elder Scrolls IV: Oblivion"
 meta_agg = meta[['name', 'metacritic_score','required_age','Genre_1']].sort_values(by='metacritic_score', ascending=False).head(10)
 
 

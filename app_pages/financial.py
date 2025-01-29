@@ -34,7 +34,6 @@ st.title("Number of games and Revenue analysis")
 
 
 #Data Frames selection
-#data = pd.read_csv('./games_prepped.csv', low_memory=False,chunksize=50000)
 df = data[(data['year'] != 2024) & (data['year'] >= 2003)]
 
 df_agg = df.groupby(['year']).agg({'estimated_revenue': 'sum'}).reset_index()
