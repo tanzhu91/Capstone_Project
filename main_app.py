@@ -1,6 +1,5 @@
 import streamlit as st
 import plotly.io as pio
-import plotly.graph_objects as go
 import warnings
 warnings.filterwarnings("ignore")
 
