@@ -1,3 +1,5 @@
+# Steam Video Games: A Comprehensive Analysis
+
 # Introduction
 
 This project analyses video game data from the popular digital distribution platform, Steam, examining key features such as the number of games, prices, platforms, genres, and total playtime. The goal is to uncover data-driven insights from the gaming world. I have always enjoyed playing video games. What makes video games so captivating? Is it the thrill of excitement, the joy of entertainment, or the challenge of competition and problem-solving? Which genres and platforms dominate the market, and where do players spend the most time?
