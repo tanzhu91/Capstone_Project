@@ -1,3 +1,0 @@
-It is a deployed app so no need to run, can just go to the following link:
-
-https://capstone-project-steam-video-games.streamlit.app/
