@@ -72,7 +72,7 @@ features_melted = cross_platform_features.melt(id_vars='platform_combination',
 
 
 #fifth
-meta = df[df['metacritic_score'] > 92]
+meta = df[df['metacritic_score'] > 92].reset_index()
 meta.loc[490, 'name'] = "The Elder Scrolls IV: Oblivion"
 meta_agg = meta[['name', 'metacritic_score','required_age','Genre_1']].sort_values(by='metacritic_score', ascending=False).head(10)
 
