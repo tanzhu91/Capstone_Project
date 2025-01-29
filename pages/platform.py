@@ -1,9 +1,6 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
-import numpy as np
-from plotly.subplots import make_subplots
-import plotly.graph_objects as go
 
 
 
