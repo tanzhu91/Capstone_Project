@@ -274,7 +274,7 @@ fig11.update_layout(title={
 
 
 price = df[df['price'] > 190].nlargest(10, 'price')
-price_agg = price.groupby(['name','price'])['year'].sum().reset_index()
+#price_agg = price.groupby(['name','price'])['year'].sum().reset_index()
 price_grouped = price.groupby(['name','price','year'], as_index=False)['Genre_1'].agg(list)
 price_grouped['Genre_1'] = price_grouped['Genre_1'].apply(lambda x: ', '.join(x))
 
