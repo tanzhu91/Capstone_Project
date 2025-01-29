@@ -210,12 +210,12 @@ st.markdown("""
 
 
 app = st.navigation([
-    st.Page("pages/intro.py", title="Introduction"),
-    st.Page("ppages/financial.py", title="Numbers and Revenue"),
-    st.Page("pages/platform.py", title ="Platform, Ratings and Top Games"),
-    st.Page("pages/genres.py", title ="Genres, Categories and Playtime"),
-    st.Page("pages/conclusion.py", title="Conclusion"),
-    st.Page("pages/references.py", title=" References")
+    st.Page("app_pages/intro.py", title="Introduction"),
+    st.Page("app_pages/financial.py", title="Numbers and Revenue"),
+    st.Page("app_pages/platform.py", title ="Platform, Ratings and Top Games"),
+    st.Page("app_pages/genres.py", title ="Genres, Categories and Playtime"),
+    st.Page("app_pages/conclusion.py", title="Conclusion"),
+    st.Page("app_pages/references.py", title=" References")
 ])
 
 app.run()
