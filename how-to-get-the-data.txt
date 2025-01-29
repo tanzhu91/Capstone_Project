@@ -1,2 +1,0 @@
-If you want to download the data follow the link https://www.kaggle.com/datasets/artermiloff/steam-games-dataset/data
-and use the notebook data_prep.ipynb.
