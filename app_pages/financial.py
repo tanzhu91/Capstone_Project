@@ -31,6 +31,8 @@ data = pd.concat(dataframes, ignore_index=True)
 
 st.title("Number of games and Revenue analysis")
 
+#tabs
+tab1, tab2 = st.tabs(["Yearly Games Released and estimated revenue", "Revenue trendline and monthly releases"])
 
 
 #Data Frames selection
@@ -59,8 +61,7 @@ year_sum_df=yearly_sum_df.sort_values(by="Year")
 
 
 
-#tabs
-tab1, tab2 = st.tabs(["Yearly Games Released and estimated revenue", "Revenue trendline and monthly releases"])
+
 
 
 
